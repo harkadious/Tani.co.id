@@ -37,6 +37,8 @@ Route::post('/replies/{reply}/favorites', 'FavoritesController@store');
 Route::delete('/replies/{reply}/favorites', 'FavoritesController@destroy');
 
 Route::get('/profiles/{user}', 'ProfilesController@show')->name('profile');
+Route::get('/profiles/{user}/notifications', 'UserNotificationsController@index');
+Route::delete('/profiles/{user}/notifications/{notification}', 'UserNotificationsController@destroy');
 
 
 // Untuk Postingan
@@ -89,6 +91,7 @@ $router->delete('/post/{slug}', [
 	'as' => 'post.destroy',
 	'uses' => 'PostsController@destroy',
 ]);
+
 
 /*
 GET	post	post.index	App\Http\Controllers\PostsController@index	web
