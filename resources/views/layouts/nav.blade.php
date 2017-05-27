@@ -70,6 +70,7 @@
                     <li><a href="{{ route('register') }}">Register</a></li>
                 @elseif( (Auth::check()) && (Auth::user()->isRole('admin|sitemods', 'all')) ) --}}
                 @if(Auth::check() && Auth::user()->isRole('admin|sitemods'))
+                <user-notifications></user-notifications>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-expanded="false">
@@ -100,6 +101,7 @@
                         </ul>
                     </li>
                 @elseif(Auth::check() && Auth::user()->isRole('user'))
+                <user-notifications></user-notifications>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-expanded="false">
