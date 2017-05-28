@@ -12,7 +12,7 @@
 							@endforeach
 			</p>
 			<hr>
-			<p>{{ $post->post_body }}</p>
+			<p>{!! $post->post_body !!}</p>
 			<hr>
 		</div>
 	</div>
